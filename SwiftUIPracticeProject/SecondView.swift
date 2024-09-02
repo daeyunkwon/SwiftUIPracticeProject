@@ -9,17 +9,24 @@ import SwiftUI
 
 struct SecondView: View {
     
+    @State private var navigationTitle = "PROFILE SETTING"
     @State private var selectedImageName = "profile_0"
     @State private var nicknameText = ""
     @State private var isSheet = false
+    @State private var pushToThirdView = false
     
     
+    //MARK: - Body
     
     var body: some View {
         Spacer()
         VStack {
-            ProfileCircle(selectedImageName: $selectedImageName)
-            
+            NavigationLink {
+                NavigationLazyView(build: ThirdView(selectedImageName: $selectedImageName))
+            } label: {
+                ProfileCircle(selectedImageName: $selectedImageName)
+            }
+
             nicknameTextField()
             
             Spacer()
@@ -29,12 +36,9 @@ struct SecondView: View {
                     .font(.system(size: 17))
                     .bold()
                 
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
+                ForEach(0..<6) { item in
+                    Spacer()
+                }
                 
                 VStack(spacing: 10) {
                     Button(action: {
@@ -92,11 +96,9 @@ struct SecondView: View {
             .frame(maxWidth: .infinity)
             .padding()
             
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
+            ForEach(0..<5) { item in
+                Spacer()
+            }
             
             Button(action: {
                 self.isSheet.toggle()
@@ -110,14 +112,18 @@ struct SecondView: View {
             })
         }
         
-        .navigationTitle("PROFILE SETTING")
+        .navigationTitle(navigationTitle)
         .navigationBarTitleDisplayMode(.inline)
         
         .sheet(isPresented: $isSheet, content: {
             FourthView()
         })
+        .onDisappear(perform: {
+            //navigationTitle = ""
+        })
     }
     
+    //MARK: - Methods
     
     func nicknameTextField() -> some View {
         ZStack(alignment: .leading) {
@@ -152,8 +158,6 @@ struct SecondView: View {
                     .stroke(Color.gray.opacity(0.5), lineWidth: 1.5)
             }
     }
-    
-    
 }
 
 #Preview {
