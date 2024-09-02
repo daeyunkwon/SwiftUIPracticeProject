@@ -13,7 +13,7 @@ struct RediusBlueBackground: ViewModifier {
         .foregroundStyle(.white)
         .bold()
         .frame(maxWidth: .infinity)
-        .padding()
+        .frame(height: 48)
         .background(.blue, in: Capsule(style: .circular))
     }
 }

@@ -14,6 +14,9 @@
 		44ED39DD2C85B19900E3E9CF /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39DC2C85B19900E3E9CF /* FirstView.swift */; };
 		44ED39E02C85B5F500E3E9CF /* RediusBlueBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39DF2C85B5F500E3E9CF /* RediusBlueBackground.swift */; };
 		44ED39E42C85B6D800E3E9CF /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39E32C85B6D800E3E9CF /* SecondView.swift */; };
+		44ED39E72C85C19D00E3E9CF /* ProfileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39E62C85C19D00E3E9CF /* ProfileCircle.swift */; };
+		44ED39E92C85D08C00E3E9CF /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39E82C85D08C00E3E9CF /* FourthView.swift */; };
+		44ED39EB2C86032C00E3E9CF /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39EA2C86032C00E3E9CF /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		44ED39DC2C85B19900E3E9CF /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		44ED39DF2C85B5F500E3E9CF /* RediusBlueBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RediusBlueBackground.swift; sourceTree = "<group>"; };
 		44ED39E32C85B6D800E3E9CF /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		44ED39E62C85C19D00E3E9CF /* ProfileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCircle.swift; sourceTree = "<group>"; };
+		44ED39E82C85D08C00E3E9CF /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
+		44ED39EA2C86032C00E3E9CF /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 			isa = PBXGroup;
 			children = (
 				44ED39DE2C85B1E300E3E9CF /* CustomModifier */,
+				44ED39E52C85C17600E3E9CF /* CustomView */,
 				44ED39CE2C85AF6000E3E9CF /* SwiftUIPracticeProjectApp.swift */,
 				44ED39D02C85AF6000E3E9CF /* ContentView.swift */,
 				44ED39D22C85AF6200E3E9CF /* Assets.xcassets */,
 				44ED39DC2C85B19900E3E9CF /* FirstView.swift */,
 				44ED39E32C85B6D800E3E9CF /* SecondView.swift */,
+				44ED39EA2C86032C00E3E9CF /* ThirdView.swift */,
+				44ED39E82C85D08C00E3E9CF /* FourthView.swift */,
 				44ED39D42C85AF6200E3E9CF /* Preview Content */,
 			);
 			path = SwiftUIPracticeProject;
@@ -82,6 +91,14 @@
 				44ED39DF2C85B5F500E3E9CF /* RediusBlueBackground.swift */,
 			);
 			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		44ED39E52C85C17600E3E9CF /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				44ED39E62C85C19D00E3E9CF /* ProfileCircle.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44ED39EB2C86032C00E3E9CF /* ThirdView.swift in Sources */,
 				44ED39D12C85AF6000E3E9CF /* ContentView.swift in Sources */,
 				44ED39E42C85B6D800E3E9CF /* SecondView.swift in Sources */,
 				44ED39E02C85B5F500E3E9CF /* RediusBlueBackground.swift in Sources */,
+				44ED39E72C85C19D00E3E9CF /* ProfileCircle.swift in Sources */,
+				44ED39E92C85D08C00E3E9CF /* FourthView.swift in Sources */,
 				44ED39DD2C85B19900E3E9CF /* FirstView.swift in Sources */,
 				44ED39CF2C85AF6000E3E9CF /* SwiftUIPracticeProjectApp.swift in Sources */,
 			);

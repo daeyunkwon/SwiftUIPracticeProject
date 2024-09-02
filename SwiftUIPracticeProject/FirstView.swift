@@ -12,15 +12,17 @@ struct FirstView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Image("launch", bundle: nil)
+                Image("launch0", bundle: nil)
                 Spacer()
-                Image("launchImage", bundle: nil)
+                Image("launchImage0", bundle: nil)
                 Spacer()
                 Spacer()
                 NavigationLink {
-                    SecondView()
+                    NavigationLazyView(build: SecondView())
                 } label: {
                     Text("시작하기")
+                        .font(.system(size: 15))
+                        .fontWeight(.bold)
                         .asRediusBlueBackground()
                 }
             }
@@ -34,4 +36,17 @@ struct FirstView: View {
 
 #Preview {
     FirstView()
+}
+
+struct NavigationLazyView<T: View>: View {
+    
+    let build: () -> T
+    
+    init(build: @autoclosure @escaping () -> T) {
+        self.build = build
+    }
+    
+    var body: some View {
+        build()
+    }
 }
