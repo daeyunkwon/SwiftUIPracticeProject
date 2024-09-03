@@ -19,6 +19,7 @@
 		44ED39EB2C86032C00E3E9CF /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39EA2C86032C00E3E9CF /* ThirdView.swift */; };
 		44ED39F72C87286F00E3E9CF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39F62C87286F00E3E9CF /* SearchView.swift */; };
 		44ED39F92C87296300E3E9CF /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39F82C87296300E3E9CF /* Coin.swift */; };
+		44ED39FB2C8779E300E3E9CF /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39FA2C8779E300E3E9CF /* UpbitAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		44ED39EA2C86032C00E3E9CF /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		44ED39F62C87286F00E3E9CF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		44ED39F82C87296300E3E9CF /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		44ED39FA2C8779E300E3E9CF /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				44ED39EA2C86032C00E3E9CF /* ThirdView.swift */,
 				44ED39E82C85D08C00E3E9CF /* FourthView.swift */,
 				44ED39F82C87296300E3E9CF /* Coin.swift */,
+				44ED39FA2C8779E300E3E9CF /* UpbitAPI.swift */,
 				44ED39F62C87286F00E3E9CF /* SearchView.swift */,
 				44ED39D42C85AF6200E3E9CF /* Preview Content */,
 			);
@@ -180,6 +183,7 @@
 				44ED39EB2C86032C00E3E9CF /* ThirdView.swift in Sources */,
 				44ED39F72C87286F00E3E9CF /* SearchView.swift in Sources */,
 				44ED39D12C85AF6000E3E9CF /* ContentView.swift in Sources */,
+				44ED39FB2C8779E300E3E9CF /* UpbitAPI.swift in Sources */,
 				44ED39E42C85B6D800E3E9CF /* SecondView.swift in Sources */,
 				44ED39E02C85B5F500E3E9CF /* RediusBlueBackground.swift in Sources */,
 				44ED39E72C85C19D00E3E9CF /* ProfileCircle.swift in Sources */,

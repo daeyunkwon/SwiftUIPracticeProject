@@ -13,13 +13,14 @@ struct SearchView: View {
     
     @State private var searchText: String = ""
     @State private var items: [Coin] = coinDummy
+    @State private var markets: Markets = []
     
-    var filteredItems: [Coin] {
+    var filteredItems: [Market] {
         if searchText.isEmpty {
-            return items
+            return markets
         } else {
-            return items.filter { coin in
-                coin.name.contains(searchText)
+            return markets.filter { market in
+                market.englishName.contains(searchText)
             }
         }
     }
@@ -28,10 +29,13 @@ struct SearchView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack {
-                    ForEach(filteredItems, id: \.id) {item in
-                        CoinRowView(item: item)
+            List {
+                ForEach(filteredItems, id: \.self) { item in
+//                        CoinRowView(item: item)
+                    NavigationLink {
+                        MarketDetailView(market: item)
+                    } label: {
+                        MarketRowView(item: item)
                     }
                 }
             }
@@ -39,14 +43,74 @@ struct SearchView: View {
             .navigationTitle("Search")
             .searchable(text: $searchText)
         }
+        
+        .task {
+            let result = try? await UpbitAPI.fetchAllMarket2()
+            
+            if let safeData = result {
+                self.markets = safeData
+            }
+        }
     }
+    
+    //MARK: - Methods
 }
 
 #Preview {
     SearchView()
 }
 
+struct MarketDetailView: View {
+    
+    var market: Market
+    
+    var body: some View {
+        Text(market.koreanName)
+    }
+}
+
+struct MarketRowView: View {
+    
+    var item: Market
+    
+    @State private var like = false
+    
+    var body: some View {
+        VStack {
+            HStack(spacing: 15) {
+                Image(systemName: "heart.fill")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 10, height: 10)
+                    .padding(10)
+                    .foregroundStyle(.green)
+                    .background(.gray)
+                    .clipShape(Circle())
+                
+                VStack(alignment: .leading) {
+                    Text(item.englishName)
+                    Text(item.market)
+                        .font(.system(size: 14))
+                        .foregroundStyle(.secondary)
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    like.toggle()
+                }, label: {
+                    Image(systemName: like ? "star.fill" : "star")
+                        .font(.system(size: 17, weight: .bold))
+                        .foregroundStyle(.black)
+                })
+                .buttonStyle(PlainButtonStyle())
+            }
+        }
+    }
+}
+
 struct CoinRowView: View {
+    
     @ObservedObject var item: Coin
     
     var body: some View {
