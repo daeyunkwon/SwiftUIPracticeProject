@@ -14,6 +14,7 @@ struct SearchView: View {
     @State private var searchText: String = ""
     @State private var items: [Coin] = coinDummy
     @State private var markets: Markets = []
+    @State private var searchedItems: [Market] = []
     
     var filteredItems: [Market] {
         if searchText.isEmpty {
@@ -28,9 +29,9 @@ struct SearchView: View {
     //MARK: - Body
     
     var body: some View {
-        NavigationView {
+        NavigationWrapper {
             List {
-                ForEach(filteredItems, id: \.self) { item in
+                ForEach(searchedItems, id: \.self) { item in
 //                        CoinRowView(item: item)
                     NavigationLink {
                         NavigationLazyView(build: MarketDetailView(market: item))
@@ -42,6 +43,15 @@ struct SearchView: View {
             
             .navigationTitle("Search")
             .searchable(text: $searchText)
+            .onSubmit(of: .search) {
+                if !searchText.isEmpty {
+                    if searchText.trimmingCharacters(in: .whitespaces).isEmpty {
+                        searchedItems = markets
+                    } else {
+                        searchedItems = searchedItems.filter { $0.englishName.contains(searchText) }
+                    }
+                }
+            }
         }
         
         .task {
@@ -49,6 +59,7 @@ struct SearchView: View {
             
             if let safeData = result {
                 self.markets = safeData
+                self.searchedItems = safeData
             }
         }
     }
@@ -76,13 +87,12 @@ struct MarketRowView: View {
     var body: some View {
         VStack {
             HStack(spacing: 15) {
-                Image(systemName: "heart.fill")
+                Image(systemName: "dollarsign.circle.fill")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 10, height: 10)
-                    .padding(10)
+                    .frame(width: 40, height: 40)
                     .foregroundStyle(.green)
-                    .background(.gray)
+                    .background(.yellow)
                     .clipShape(Circle())
                 
                 VStack(alignment: .leading) {
@@ -97,7 +107,7 @@ struct MarketRowView: View {
                 Button(action: {
                     like.toggle()
                 }, label: {
-                    Image(systemName: like ? "star.fill" : "star")
+                    Image(systemName: like ? "heart.fill" : "heart")
                         .font(.system(size: 17, weight: .bold))
                         .foregroundStyle(.black)
                 })
@@ -134,7 +144,7 @@ struct CoinRowView: View {
                 Button(action: {
                     item.like.toggle()
                 }, label: {
-                    Image(systemName: item.like ? "star.fill" : "star")
+                    Image(systemName: item.like ? "heart.fill" : "heart")
                         .font(.system(size: 17, weight: .bold))
                         .foregroundStyle(.black)
                 })
