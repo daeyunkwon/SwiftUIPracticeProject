@@ -37,16 +37,3 @@ struct FirstView: View {
 #Preview {
     FirstView()
 }
-
-struct NavigationLazyView<T: View>: View {
-    
-    let build: () -> T
-    
-    init(build: @autoclosure @escaping () -> T) {
-        self.build = build
-    }
-    
-    var body: some View {
-        build()
-    }
-}

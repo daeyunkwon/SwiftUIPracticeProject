@@ -20,6 +20,12 @@
 		44ED39F72C87286F00E3E9CF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39F62C87286F00E3E9CF /* SearchView.swift */; };
 		44ED39F92C87296300E3E9CF /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39F82C87296300E3E9CF /* Coin.swift */; };
 		44ED39FB2C8779E300E3E9CF /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39FA2C8779E300E3E9CF /* UpbitAPI.swift */; };
+		44ED39FF2C885B5000E3E9CF /* MyRandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED39FE2C885B5000E3E9CF /* MyRandomImageView.swift */; };
+		44ED3A012C885C5100E3E9CF /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED3A002C885C5100E3E9CF /* NavigationLazyView.swift */; };
+		44ED3A042C885D4100E3E9CF /* NavigationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED3A032C885D4100E3E9CF /* NavigationWrapper.swift */; };
+		44ED3A062C885E5C00E3E9CF /* NavigationBarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED3A052C885E5C00E3E9CF /* NavigationBarWrapper.swift */; };
+		44ED3A082C88789500E3E9CF /* LoremPicsumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED3A072C88789500E3E9CF /* LoremPicsumAPI.swift */; };
+		44ED3A0A2C88A7AE00E3E9CF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED3A092C88A7AE00E3E9CF /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		44ED39F62C87286F00E3E9CF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		44ED39F82C87296300E3E9CF /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		44ED39FA2C8779E300E3E9CF /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
+		44ED39FE2C885B5000E3E9CF /* MyRandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRandomImageView.swift; sourceTree = "<group>"; };
+		44ED3A002C885C5100E3E9CF /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
+		44ED3A032C885D4100E3E9CF /* NavigationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWrapper.swift; sourceTree = "<group>"; };
+		44ED3A052C885E5C00E3E9CF /* NavigationBarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWrapper.swift; sourceTree = "<group>"; };
+		44ED3A072C88789500E3E9CF /* LoremPicsumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremPicsumAPI.swift; sourceTree = "<group>"; };
+		44ED3A092C88A7AE00E3E9CF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,7 @@
 		44ED39CD2C85AF6000E3E9CF /* SwiftUIPracticeProject */ = {
 			isa = PBXGroup;
 			children = (
+				44ED3A022C885D2B00E3E9CF /* Wrapper */,
 				44ED39DE2C85B1E300E3E9CF /* CustomModifier */,
 				44ED39E52C85C17600E3E9CF /* CustomView */,
 				44ED39CE2C85AF6000E3E9CF /* SwiftUIPracticeProjectApp.swift */,
@@ -81,6 +94,9 @@
 				44ED39F82C87296300E3E9CF /* Coin.swift */,
 				44ED39FA2C8779E300E3E9CF /* UpbitAPI.swift */,
 				44ED39F62C87286F00E3E9CF /* SearchView.swift */,
+				44ED3A072C88789500E3E9CF /* LoremPicsumAPI.swift */,
+				44ED39FE2C885B5000E3E9CF /* MyRandomImageView.swift */,
+				44ED3A092C88A7AE00E3E9CF /* CategoryView.swift */,
 				44ED39D42C85AF6200E3E9CF /* Preview Content */,
 			);
 			path = SwiftUIPracticeProject;
@@ -106,8 +122,18 @@
 			isa = PBXGroup;
 			children = (
 				44ED39E62C85C19D00E3E9CF /* ProfileCircle.swift */,
+				44ED3A002C885C5100E3E9CF /* NavigationLazyView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		44ED3A022C885D2B00E3E9CF /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				44ED3A032C885D4100E3E9CF /* NavigationWrapper.swift */,
+				44ED3A052C885E5C00E3E9CF /* NavigationBarWrapper.swift */,
+			);
+			path = Wrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,16 +207,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				44ED39EB2C86032C00E3E9CF /* ThirdView.swift in Sources */,
+				44ED3A0A2C88A7AE00E3E9CF /* CategoryView.swift in Sources */,
+				44ED3A042C885D4100E3E9CF /* NavigationWrapper.swift in Sources */,
 				44ED39F72C87286F00E3E9CF /* SearchView.swift in Sources */,
 				44ED39D12C85AF6000E3E9CF /* ContentView.swift in Sources */,
+				44ED3A012C885C5100E3E9CF /* NavigationLazyView.swift in Sources */,
 				44ED39FB2C8779E300E3E9CF /* UpbitAPI.swift in Sources */,
 				44ED39E42C85B6D800E3E9CF /* SecondView.swift in Sources */,
 				44ED39E02C85B5F500E3E9CF /* RediusBlueBackground.swift in Sources */,
 				44ED39E72C85C19D00E3E9CF /* ProfileCircle.swift in Sources */,
+				44ED3A082C88789500E3E9CF /* LoremPicsumAPI.swift in Sources */,
+				44ED3A062C885E5C00E3E9CF /* NavigationBarWrapper.swift in Sources */,
 				44ED39E92C85D08C00E3E9CF /* FourthView.swift in Sources */,
 				44ED39DD2C85B19900E3E9CF /* FirstView.swift in Sources */,
 				44ED39F92C87296300E3E9CF /* Coin.swift in Sources */,
 				44ED39CF2C85AF6000E3E9CF /* SwiftUIPracticeProjectApp.swift in Sources */,
+				44ED39FF2C885B5000E3E9CF /* MyRandomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

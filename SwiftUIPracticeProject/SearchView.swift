@@ -33,7 +33,7 @@ struct SearchView: View {
                 ForEach(filteredItems, id: \.self) { item in
 //                        CoinRowView(item: item)
                     NavigationLink {
-                        MarketDetailView(market: item)
+                        NavigationLazyView(build: MarketDetailView(market: item))
                     } label: {
                         MarketRowView(item: item)
                     }
@@ -52,8 +52,6 @@ struct SearchView: View {
             }
         }
     }
-    
-    //MARK: - Methods
 }
 
 #Preview {
