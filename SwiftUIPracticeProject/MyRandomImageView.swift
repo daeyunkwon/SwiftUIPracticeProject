@@ -39,9 +39,17 @@ struct MyRandomImageView: View {
         
         .task {
             for i in 0..<4 {
-                for j in 0..<5 {
-                    LoremPicsumAPI.fetchImage { data in
-                        imageDatas[i].append(UIImage(data: data)!)
+                for _ in 0..<5 {
+//                    LoremPicsumAPI.fetchImage { data in
+//                        imageDatas[i].append(UIImage(data: data)!)
+//                    }
+                    Task {
+                        do {
+                            let result = try await LoremPicsumAPI.fetchImage()
+                            imageDatas[i].append(UIImage(data: result) ?? UIImage())
+                        } catch {
+                            print(error)
+                        }
                     }
                 }
             }

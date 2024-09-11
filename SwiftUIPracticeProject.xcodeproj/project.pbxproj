@@ -49,6 +49,7 @@
 		44ED3A052C885E5C00E3E9CF /* NavigationBarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWrapper.swift; sourceTree = "<group>"; };
 		44ED3A072C88789500E3E9CF /* LoremPicsumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremPicsumAPI.swift; sourceTree = "<group>"; };
 		44ED3A092C88A7AE00E3E9CF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		44ED3A0B2C89BE5F00E3E9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		44ED39CD2C85AF6000E3E9CF /* SwiftUIPracticeProject */ = {
 			isa = PBXGroup;
 			children = (
+				44ED3A0B2C89BE5F00E3E9CF /* Info.plist */,
 				44ED3A022C885D2B00E3E9CF /* Wrapper */,
 				44ED39DE2C85B1E300E3E9CF /* CustomModifier */,
 				44ED39E52C85C17600E3E9CF /* CustomView */,
@@ -359,6 +361,7 @@
 				DEVELOPMENT_TEAM = 9M37U587ZT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPracticeProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -388,6 +391,7 @@
 				DEVELOPMENT_TEAM = 9M37U587ZT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPracticeProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
